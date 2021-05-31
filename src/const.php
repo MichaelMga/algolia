@@ -4,7 +4,7 @@
   define("dbUsername" , "root");
   define("dbPassword" , "");
   define("dbHost" , "localhost");
-  define("dbName" , "theodb");
+  define("dbName" , "algoliadb");
   define("admin" , "theoadmin");
 
 

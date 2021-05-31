@@ -2,8 +2,11 @@
 
 /*
 
-    php bin/console make table action
+    php bin/console make table article
 
-          add table 
+          add table article
+
+            each article has content subsection
+
 
     */

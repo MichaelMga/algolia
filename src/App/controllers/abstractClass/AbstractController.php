@@ -18,21 +18,16 @@ abstract class AbstractController
  
    public function renderPage($page, $array) : Response
    {
-
       extract($array);
-
       ob_start();
-      
+
       include "templates/base.php";
       include "templates/$page.php";
-
 
       $content = ob_get_clean();
       return new Response($content);
 
    }   
-
-
 
 
    public function getEntityManager(){

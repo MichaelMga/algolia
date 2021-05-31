@@ -18,12 +18,6 @@ class StringsController extends AbstractController
 {
 
 
-    public function displayIndex(): Response
-    {
-        
-
-
-    }
 
 
 }

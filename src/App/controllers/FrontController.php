@@ -33,8 +33,17 @@ class FrontController extends AbstractController
 
     public function renderSubSection(string $subsection) : Response
     {
-        return $this->renderPage("$section/$subsection", []);
+        $articles = $this->getSuperOrm()->getRepository("article")->getAllElementsFromProperty("subSection" , $subsection);
+
+        return $this->renderPage("$section/$subsection", ["articles" => $articles] );
 
     }
+
+
+    public function renderArticle(string $articleId) : Response
+    {
+        return $this->renderPage("articles/show", ["article" => $article]);
+    }
+
 
 }
