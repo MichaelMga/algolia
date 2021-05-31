@@ -5,7 +5,7 @@
   define("dbPassword" , "");
   define("dbHost" , "localhost");
   define("dbName" , "algoliadb");
-  define("admin" , "theoadmin");
+  define("admin" , "algoliadmin");
 
 
 

@@ -6,7 +6,16 @@
 
           add table article
 
-            each article has content subsection
+            each article has content subsection, name, content
+
+
+
+      
+
+    php bin/console make table user
+
+          each user has username, password+
+
 
 
     */

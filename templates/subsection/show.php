@@ -9,7 +9,7 @@
 
      foreach($articles as $article)
      {
-        echo $article->getPropertyValue("name");
+        echo "<a href='" . rootUrl . "article?num=" . $article->getPropertyValue("ID") . "'>" .  $article->getPropertyValue("name") . "</a>";
         echo "</br>";
      }
  }

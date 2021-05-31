@@ -12,22 +12,24 @@
  require_once "src/services/database/entityManager.php";
 
 
-
-
 class FrontController extends AbstractController
 {
 
     public function renderHome() : Response
     {
         return $this->renderPage("home", []);
+    }
 
+    
+    public function newArticlePage() : Response
+    {
+        return $this->renderPage("/articles/new", []);
     }
     
 
     public function renderSection(string $section) : Response
     {
         return $this->renderPage("$section/index", []);
-
     }
 
 
@@ -36,13 +38,22 @@ class FrontController extends AbstractController
         $articles = $this->getSuperOrm()->getRepository("article")->getAllElementsFromProperty("subSection" , $subsection);
 
         return $this->renderPage("subsection/show", ["subsection" => $subsection ,  "articles" => $articles] );
-
     }
 
 
-    public function renderArticle(string $articleId) : Response
+    public function renderArticle(int $articleId) : Response
     {
-        return $this->renderPage("articles/show", ["article" => $article]);
+        $article = $this->getSuperOrm()->getRepository("article")->getElementFromId($articleId);
+
+        if($article != false)
+        {
+            return $this->renderPage("articles/show", ["article" => $article]);
+
+        } else {
+
+            header('Location:' . rootUrl);
+        }
+
     }
 
 
