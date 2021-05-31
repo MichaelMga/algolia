@@ -2,12 +2,11 @@
 
 
 <a href="<?php echo rootUrl ?>strings"><button>Strings</button></a>
+<a href="<?php echo rootUrl ?>sorting"><button>Sorting</button></a>
+<a href="<?php echo rootUrl ?>graphs"><button>Graphs</button></a>
+<a href="<?php echo rootUrl ?>tree"><button>Tree</button></a>
+<a href="<?php echo rootUrl ?>miscellaneous"><button>Miscellaneous</button></a>
 
-<button>Sorting</button>
 
-<button>Graphs</button>
 
-<button>Tree</button>
-
-<button>Millasceaneous</button>
 
