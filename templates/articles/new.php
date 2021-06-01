@@ -4,33 +4,29 @@
 
    <form action="<?php echo rootUrl ?>dbNewArticle" method="post">
 
-
-      <select name="section">
-         <option>Section</option>
-         <option>algorithms</option>
-         <option >architecture</option>
-
-      </select>
-
-
       
       <select name="subsection">
-         <option value="Subsection">SubSection</option>
-         <option>(Algorithms ) : </option>
+         <option>SubSection</option>
+         <option>(Algorithms) : </option>
          <option name="strings">Strings</option>
-         <option name="trees">Trees</option>
+         <option name="trees">trees</option>
          <option name="sorting" >Sorting</option>
          <option name="miscellaneous" >Miscellaneous</option>
-
-         <option>(Architecture ) : </option>
+         <option>(datastructures) : </option>
+         <option name="linkedLists">Linked lists</option>
+         <option name="arrays">Arrays</option>
+         <option name="stacks">stacks</option>
+         <option name="queues">Queues</option>
+         <option name="heaps">heaps</option>
+         <option>(Architecture) : </option>
          <option name="cleanCode">Clean code</option>
          <option name="SOLID">SOLID</option>
          <option name="designPatterns">Design patterns</option>
       </select>
 
 
-      <input type="text" placeholder="name">
-      
+      <input type="text" name="name" placeholder="name">
+
 
       <input type="submit" value="Create">
    

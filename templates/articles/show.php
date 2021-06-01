@@ -1,5 +1,5 @@
 
-<h1> Here is your article </h1>
+<h1> <?php echo $article->getPropertyValue("name") ?> </h1>
 
 
 
@@ -8,8 +8,13 @@
   if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true )
   {
 
-    echo "<form>
-            <textarea  rows='100' cols='175'>" . $article->getPropertyValue("content") . "</textarea>
+    echo "<form method='post' action='" . rootUrl .  "dbEditArticleContent'>
+
+            <input name='id' type='hidden' value='" .  $article->getPropertyValue("ID")  . "'>" .
+            
+            "<textarea name='content' rows='100' cols='175'>" . $article->getPropertyValue("content") . 
+
+            "</textarea>
 
             <input type='submit' value='edit'>
        </form>";

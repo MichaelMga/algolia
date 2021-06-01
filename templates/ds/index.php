@@ -1,12 +1,12 @@
 
 <h1>Data structures</h1>
 
-<button>Linked lists</button>
+<a href="linkedLists"><button>Linked lists</button></a>
 
-<button>Arrays</button>
+<a href="arrays"><button>Arrays</button></a>
 
-<button>Stacks</button>
+<a href="stacks"><button>Stacks</button></a>
 
-<button>Queues</button>
+<a href="queues"><button>Queues</button></a>
 
-<button>Heaps</button>
+<a href="heaps"><button>Heaps</button></a>
