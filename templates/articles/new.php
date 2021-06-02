@@ -10,6 +10,7 @@
          <option>(Algorithms) : </option>
          <option name="strings">Strings</option>
          <option name="trees">trees</option>
+          <option name="trees">graphs</option>
          <option name="sorting" >Sorting</option>
          <option name="miscellaneous" >Miscellaneous</option>
          <option>(datastructures) : </option>

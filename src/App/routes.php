@@ -8,6 +8,9 @@
     rootUrl . 'article' => ["name" => "home", "controller" => "App\Controllers\FrontController" , "method" =>  "renderArticle" , "parameters" => [$request->getGet("num", 1)]  ] ,
 
     rootUrl . 'newArticle' => ["name" => "home", "controller" => "App\Controllers\ArticleController" , "method" =>  "rendernewArticlePage" , "parameters" => [] ] ,
+    rootUrl . 'removeArticle' => ["name" => "home", "controller" => "App\Controllers\ArticleController" , "method" =>  "removeArticle" , "parameters" => [$request->getGet("num", 1)] ] ,
+
+    
     rootUrl . 'dbNewArticle' => ["name" => "home", "controller" => "App\Controllers\ArticleController" , "method" =>  "createArticle" , "parameters" => [$request->getPost("subsection", false) , $request->getPost("name", false) ] ] ,
     rootUrl . 'dbEditArticleContent' => ["name" => "home", "controller" => "App\Controllers\ArticleController" , "method" =>  "editArticleContent" , "parameters" => [$request->getPost("id", false) , $request->getPost("content", "false") ] ] ,
 

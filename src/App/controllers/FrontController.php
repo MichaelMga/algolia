@@ -31,16 +31,29 @@ class FrontController extends AbstractController
     {
         $articles = $this->getSuperOrm()->getRepository("article")->getAllElementsFromProperty("subSection" , $subsection);
 
-        return $this->renderPage("subsection/show", ["subsection" => $subsection ,  "articles" => $articles] );
+        if(isset($_SESSION["loggedIn"]) == true && $_SESSION["username"] == admin){
+            
+            $admin = true;
+          
+        } else {
+
+            $admin = false;
+
+         }
+
+        return $this->renderPage("subsection/show", ["subsection" => $subsection ,  "articles" => $articles, "admin" => $admin] );
     }
 
 
     public function renderArticle(int $articleId) : Response
-    {
+
+      {
+
         $article = $this->getSuperOrm()->getRepository("article")->getElementFromId($articleId);
 
         if($article != false)
         {
+            
             return $this->renderPage("articles/show", ["article" => $article]);
 
         } else {

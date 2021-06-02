@@ -22,7 +22,7 @@ class ArticleController extends AbstractController
 
 
     
-    public function createArticle(string $subsection, string $name) : Response
+    public function createArticle(string $subsection, string $name) : void
     {
 
         try{
@@ -38,21 +38,23 @@ class ArticleController extends AbstractController
           
             $entityManager->insert($article);
 
-            $content = "article created";
+
+            header("Location:" . rootUrl);
+
+
     
         } catch(Exception $e) {
 
-            $content = $e->getMessage();
+            echo $e->getMessage();
 
         }
 
-        return new Response($content);
      
     }
 
 
 
-    public function editArticleContent(string $articleId, string $newContent) : Response
+    public function editArticleContent(int $articleId, string $newContent)  : void
     {
 
         try{
@@ -61,19 +63,35 @@ class ArticleController extends AbstractController
 
             $article = $this->getSuperOrm()->getRepository("article")->getElementFromId($articleId);
 
-            echo $newContent;
+            $article->setProperty("content", $newContent);    
 
-            $article->setProperty("content", $newContent);            
             $entityManager->insert($article);
 
-            $content = "article edited!";
+            header("Location:" . rootUrl . "article?num=$articleId");
 
         } catch(Exception $e)
         {
-            $content = $e->getMessage();
+           echo $e->getMessage();
         }
 
-        return new Response($content);
+    }
+
+
+
+
+    public function removeArticle(int $articleId) 
+    {
+        try{
+
+            $entityManager = $this->getEntityManager();
+            $article = $this->getSuperOrm()->getRepository("article")->getElementFromId($articleId);
+            $entityManager->remove($article);
+            header("Location:" . rootUrl);
+
+        } catch(Exception $e)
+        {
+           echo $e->getMessage();
+        }
 
     }
     

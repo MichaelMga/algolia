@@ -25,6 +25,7 @@ abstract class AbstractController
       include "templates/$page.php";
 
       $content = ob_get_clean();
+      
       return new Response($content);
 
    }   
