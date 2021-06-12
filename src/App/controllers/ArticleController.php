@@ -63,7 +63,7 @@ class ArticleController extends AbstractController
 
             $article = $this->getSuperOrm()->getRepository("article")->getElementFromId($articleId);
 
-            $article->setProperty("content", $newContent);    
+            $article->setProperty("content", urlencode($newContent));    
 
             $entityManager->insert($article);
 

@@ -12,7 +12,7 @@
 
             <input name='id' type='hidden' value='" .  $article->getPropertyValue("ID")  . "'>" .
             
-            "<textarea name='content' rows='100' cols='175'>" . $article->getPropertyValue("content") . 
+            "<textarea name='content' rows='100' cols='175'>" . urldecode($article->getPropertyValue("content")) . 
 
             "</textarea>
 
@@ -28,7 +28,7 @@
 
 
 
-        echo $article->getPropertyValue("content");
+        echo urldecode($article->getPropertyValue("content"));
  
 
 

@@ -1,8 +1,13 @@
-
 *{
     margin:0;
     padding:0;
 }
+
+
+
+  body{
+    font-family: 'Lato', sans-serif;
+  }
 
 
 
@@ -12,21 +17,85 @@ button{
 
 
 #navBar{
-
     position:absolute;
     top:0;
     left:0;
     width: 100%;
     height: 10%;
-    background:black;
+    display:flex;
+    justify-content:flex-end;
 }
 
 
 
 main{
- position:absolute;
- top:10%;
- left:0;
- height: 90%;
- width: 100%;
+  position:absolute;
+  top:10%;
+  left:0;
+  height: 90%;
+  width: 100%;
+}
+
+
+#sectionContainer{
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  height: 40%;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sectionBlock{
+    height: 100%;
+    width: 17.5%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+
+.sectionBlockA
+{
+  height: 80%;
+  width: 100%;
+  background:red;
+}
+
+
+.sectionBlockB
+{
+  height: 20%;
+  width: 100%;
+  background:purple;  
+}
+
+
+
+#subSectionContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+
+.subSectionContainerA{
+  margin-top:2.5%;
+  height: 10vh;
+  width: 70%;
+  padding-left: 2.5%;
+  background: purple;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }

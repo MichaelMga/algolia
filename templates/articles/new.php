@@ -14,15 +14,15 @@
          <option name="sorting" >Sorting</option>
          <option name="miscellaneous" >Miscellaneous</option>
          <option>(datastructures) : </option>
-         <option name="linkedLists">Linked lists</option>
-         <option name="arrays">Arrays</option>
+         <option name="linkedLists">linkedLists</option>
+         <option name="arrays">arrays</option>
          <option name="stacks">stacks</option>
-         <option name="queues">Queues</option>
+         <option name="queues">queues</option>
          <option name="heaps">heaps</option>
          <option>(Architecture) : </option>
-         <option name="cleanCode">Clean code</option>
+         <option name="cleanCode">cleanCode</option>
          <option name="SOLID">SOLID</option>
-         <option name="designPatterns">Design patterns</option>
+         <option name="designPatterns">designPatterns</option>
       </select>
 
 
