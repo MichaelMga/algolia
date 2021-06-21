@@ -1,5 +1,4 @@
 
-<h1><?php echo $subsection ?> </h1>
 
 
 <div id="subSectionContainer">
@@ -12,7 +11,19 @@
      foreach($articles as $article)
      {
 
-        echo "<div class='subSectionContainerA'><a href='" . rootUrl . "article?num=" . $article->getPropertyValue("ID") . "'>" .  $article->getPropertyValue("name") . "</a></div>";
+        echo "<div class='subSectionContainerA'>
+
+                 <div class='subSectionContainerAA'>
+                     <a href='" . rootUrl . "article?num=" . $article->getPropertyValue("ID") . "'>" .  $article->getPropertyValue("name") . "</a>
+                 </div>
+
+                 <div class='subSectionContainerAB'>
+
+                     <a href='" . rootUrl . "article?num=" . $article->getPropertyValue("ID") . "'><img src='public/assets/images/notebook.png'></a>
+
+                                    </div>
+               
+             </div>";
 
         if($admin){
 

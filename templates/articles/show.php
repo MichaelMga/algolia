@@ -1,6 +1,8 @@
 
 <h1> <?php echo $article->getPropertyValue("name") ?> </h1>
 
+</br>
+</br>
 
 
 <?php
